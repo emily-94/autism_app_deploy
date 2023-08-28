@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8"
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="shA3_Score84-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="shA3_Score84-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+{% extends 'base.html' %}
+
+
+    {% block main %}
+
+  <style>
+  
+  h1 {
+    font-size: 2.5em; 
+    font-family: 'Aldrich', sans-serif; 
+    color: #A969d4;
+    text-shadow: 2px 2px 2px  #000000;
+    letter-spacing: 1.2px;
+    text-align: center;   }
+
+
+
+  </style>  
+    
+</head>
+
+</head>
+<body>
+    
+
+        <div class ="container">
+
+
+          
+          <div class="mt-4 p-3 text-black rounded" style ="background-color: #EBD8F5";>
+            <h1 style = "text-align:center">Autism Quiz for Adults</h1>
+            <p style="text-align: center; font-size: 1.15rem; margin-top: 20px;">
+                This quiz is designed to screen for Autism Spectrum Disorder in adults age 16+ and is based on the Adult Version of the AQ-10 (Austism Spectrum Quotient).
+                The test is recommended for use with adults with possible autism who do not have a learning disability.
+            </p>
+        </div>
+        
+
+             <form action = "{{url_for ('adultpredict', unique_id = unique_id)}}" method = "post">
+         
+                <div class = "card mt-4" >
+                        <div class  = "card-body">
+                            <h5 class="card-title">For each of the statements below, select the most appropriate option for you.</h5>
+
+                <br>
+                <div class = "form-group">
+                <label for ="A1_Score">1. I often notice small sounds when others do not.</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="A1_Score" id="A1_Score" placeholder ="A1_Score" required = "required", value ="Definitely agree">
+                        <label class="form-check-label" for="A1_Score">
+                          Definitely agree
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="A1_Score" id="A1_Score" placeholder ="A1_Score" required = "required", value ="Slightly agree">
+                        <label class="form-check-label" for="A1_Score">
+                          Slightly agree
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="A1_Score" id="A1_Score" placeholder ="A1_Score" required = "required", value ="Slightly disagree">
+                        <label class="form-check-label" for="A1_Score">
+                          Slightly disagree
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="A1_Score" id="A1_Score" placeholder ="A1_Score" required = "required", value ="Definitely disagree">
+                        <label class="form-check-label" for="A1_Score">
+                          Definitely disagree
+                        </label>
+                    </div>
+                   
+               </div>
+                <br>
+                <br>
+
+                <div class = "form-group">
+                    <label for ="A2_Score">2. I usually concentrate more on the whole picture, rather than small details.</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A2_Score" id="A2_Score" placeholder ="A2_Score" required = "required", value ="Definitely agree">
+                            <label class="form-check-label" for="A2_Score">
+                              Definitely agree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A2_Score" id="A2_Score" placeholder ="A2_Score" required = "required", value ="Slightly agree">
+                            <label class="form-check-label" for="A2_Score">
+                              Slightly agree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A2_Score" id="A2_Score" placeholder ="A2_Score" required = "required", value ="Slightly disagree">
+                            <label class="form-check-label" for="A2_Score">
+                              Slightly disagree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A2_Score" id="A2_Score" placeholder ="A2_Score" required = "required", value ="Definitely disagree">
+                            <label class="form-check-label" for="A2_Score">
+                              Definitely disagree
+                            </label>
+                        </div>
+                                   
+                   </div>
+
+                <br>
+                <br>
+                <div class = "form-group">
+                    <label for ="A3_Score">3. I find it easy to do more than one thing at once.</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A3_Score" id="A3_Score" placeholder ="A3_Score" required = "required", value ="Definitely agree">
+                            <label class="form-check-label" for="A3_Score">
+                              Definitely agree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A3_Score" id="A3_Score" placeholder ="A3_Score" required = "required", value ="Slightly agree">
+                            <label class="form-check-label" for="A3_Score">
+                              Slightly agree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A3_Score" id="A3_Score" placeholder ="A3_Score" required = "required", value ="Slightly disagree">
+                            <label class="form-check-label" for="A3_Score">
+                              Slightly disagree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A3_Score" id="A3_Score" placeholder ="A3_Score" required = "required", value ="Definitely disagree">
+                            <label class="form-check-label" for="A3_Score">
+                              Definitely disagree
+                            </label>
+                        </div>
+                      
+                    </div>
+                    <br>
+                    <br>
+                   
+                    <div class = "form-group">
+                    <label for ="A4_Score">4. If there is an interruption, I can switch back to what I was doing very quickly.</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A4_Score" id="A4_Score" placeholder ="A4_Score" required = "required", value ="Definitely agree">
+                            <label class="form-check-label" for="A4_Score">
+                              Definitely agree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A4_Score" id="A4_Score" placeholder ="A4_Score" required = "required", value ="Slightly agree">
+                            <label class="form-check-label" for="A4_Score">
+                              Slightly agree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A4_Score" id="A4_Score" placeholder ="A4_Score" required = "required", value ="Slightly disagree">
+                            <label class="form-check-label" for="A4_Score">
+                              Slightly disagree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A4_Score" id="A4_Score" placeholder ="A4_Score" required = "required", value ="Definitely disagree">
+                            <label class="form-check-label" for="A4_Score">
+                              Definitely disagree
+                            </label>
+                        </div>
+                       
+                   </div>
+
+                <br>
+                <br>
+                <div class = "form-group">
+                    <label for ="A5_Score">5. I find it easy to 'read between the lines' when someone is talking to me.</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A5_Score" id="A5_Score" placeholder ="A5_Score" required = "required", value ="Definitely agree">
+                            <label class="form-check-label" for="A5_Score">
+                              Definitely agree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A5_Score" id="A5_Score" placeholder ="A5_Score" required = "required", value ="Slightly agree">
+                            <label class="form-check-label" for="A5_Score">
+                              Slightly agree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A5_Score" id="A5_Score" placeholder ="A5_Score" required = "required", value ="Slightly disagree">
+                            <label class="form-check-label" for="A5_Score">
+                              Slightly disagree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A5_Score" id="A5_Score" placeholder ="A5_Score" required = "required", value ="Definitely disagree">
+                            <label class="form-check-label" for="A5_Score">
+                              Definitely disagree
+                            </label>
+                        </div>
+                                   
+                   </div>
+            
+                <br>
+                <br>
+                <div class = "form-group">
+                    <label for ="A6_Score">6. I know how to tell if someone listening to me is getting bored.</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A6_Score" id="A6_Score" placeholder ="A6_Score" required = "required", value ="Definitely agree">
+                            <label class="form-check-label" for="A6_Score">
+                              Definitely agree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A6_Score" id="A6_Score" placeholder ="A6_Score" required = "required", value ="Slightly agree">
+                            <label class="form-check-label" for="A6_Score">
+                              Slightly agree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A6_Score" id="A6_Score" placeholder ="A6_Score" required = "required", value ="Slightly disagree">
+                            <label class="form-check-label" for="A6_Score">
+                              Slightly disagree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A6_Score" id="A6_Score" placeholder ="A6_Score" required = "required", value ="Definitely disagree">
+                            <label class="form-check-label" for="A6_Score">
+                              Definitely disagree
+                            </label>
+                        </div>
+        
+                   <br>
+                   <br>
+
+                   <div class = "form-group">
+                    <label for ="A7_Score">7. When I'm reading a story I find it difficult to work out the characters' intentions. </label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A7_Score" id="A7_Score" placeholder ="A7_Score" required = "required", value ="Definitely agree">
+                            <label class="form-check-label" for="A7_Score">
+                              Definitely agree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A7_Score" id="A7_Score" placeholder ="A7_Score" required = "required", value ="Slightly agree">
+                            <label class="form-check-label" for="A7_Score">
+                              Slightly agree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A7_Score" id="A7_Score" placeholder ="A7_Score" required = "required", value ="Slightly disagree">
+                            <label class="form-check-label" for="A7_Score">
+                              Slightly disagree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A7_Score" id="A7_Score" placeholder ="A7_Score" required = "required", value ="Definitely disagree">
+                            <label class="form-check-label" for="A7_Score">
+                              Definitely disagree
+                            </label>
+                        </div>
+                    
+                   </div>
+             
+                <br>
+                <br>
+
+                <div class = "form-group">
+                    <label for ="A8_Score">8. I like to collect information about categories of things (e.g. types of car, types of bird, types of train, types of plant etc.)</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A8_Score" id="A8_Score" placeholder ="A8_Score" required = "required", value ="Definitely agree">
+                            <label class="form-check-label" for="A8_Score">
+                              Definitely agree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A8_Score" id="A8_Score" placeholder ="A8_Score" required = "required", value ="Slightly agree">
+                            <label class="form-check-label" for="A8_Score">
+                              Slightly agree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A8_Score" id="A8_Score" placeholder ="A8_Score" required = "required", value ="Slightly disagree">
+                            <label class="form-check-label" for="A8_Score">
+                              Slightly disagree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A8_Score" id="A8_Score" placeholder ="A8_Score" required = "required", value ="Definitely disagree">
+                            <label class="form-check-label" for="A8_Score">
+                              Definitely disagree
+                            </label>
+                        </div>
+                    
+                                     
+                   </div>
+                <br>
+                <br>
+
+                <div class = "form-group">
+                    <label for ="A9_Score">9. I find it easy to work out what someone is thinking or feeling just by looking at their face.</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A9_Score" id="A9_Score" placeholder ="A9_Score" required = "required", value ="Definitely agree">
+                            <label class="form-check-label" for="A9_Score">
+                              Definitely agree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A9_Score" id="A9_Score" placeholder ="A9_Score" required = "required", value ="Slightly agree">
+                            <label class="form-check-label" for="A9_Score">
+                              Slightly agree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A9_Score" id="A9_Score" placeholder ="A9_Score" required = "required", value ="Slightly disagree">
+                            <label class="form-check-label" for="A9_Score">
+                              Slightly disagree
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A9_Score" id="A9_Score" placeholder ="A9_Score" required = "required", value ="Definitely disagree">
+                            <label class="form-check-label" for="A9_Score">
+                              Definitely disagree
+                            </label>
+                        </div>
+                      
+                   </div>
+                <br>
+                <br>
+
+
+                <div class = "form-group">
+                    <label for ="A10_Score">10. I find it difficult to work out people's intentions.</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A10_Score" id="A10_Score" placeholder ="A10_Score" required = "required", value ="Definitely agree">
+                            <label class="form-check-label" for="A10_Score">
+                              Definitely agree
+                            </label>
+                        </div>
+                       
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A10_Score" id="A10_Score" placeholder ="A10_Score" required = "required", value ="Slightly agree">
+                            <label class="form-check-label" for="A10_Score">
+                              Slightly agree
+                            </label>
+                        </div>
+                    
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A10_Score" id="A10_Score" placeholder ="A10_Score" required = "required", value ="Slightly disagree">
+                            <label class="form-check-label" for="A10_Score">
+                              Slightly disagree
+                            </label>
+                        </div>
+                       
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A10_Score" id="A10_Score" placeholder ="A10_Score" required = "required", value ="Definitely disagree">
+                            <label class="form-check-label" for="A10_Score">
+                              Definitely disagree
+                            </label>
+                        </div>
+                      
+            
+                   
+                   </div>
+
+                <br>
+                <br>
+                <div class="d-flex align-items-center">
+                <button type ="submit" class = "btn btn-primary btn-block btn-large">Submit</button>
+            </div>
+             </form>
+            </div>
+
+            
+
+           
+
+             {% endblock %}
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8"
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="shA3_Score84-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="shA3_Score84-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+{% extends 'base.html' %}
+
+
+    {% block main %}
+
+  <style>
+  
+  h1 {
+    font-size: 2.5em; 
+    font-family: 'Aldrich', sans-serif; 
+    color: #A969d4;
+    text-shadow: 2px 2px 2px  #000000;
+    letter-spacing: 1.2px;
+    text-align: center;   }
+
+
+
+  </style>  
+    
+</head>
+
+</head>
+<body>
+    
+
+        <div class ="container">
+
+
+          
+          <div class="mt-4 p-3 text-black rounded" style ="background-color: #EBD8F5";>
+            <h1 style = "text-align:center">Autism Quiz for Children</h1>
+            <p style="text-align: center; font-size: 1.15rem; margin-top: 20px;">
+                Let's get started!
+            </p>
+        </div>
+        
+
+             <form action = "{{url_for ('childstart')}}" method = "post">
+               <div class = "card mt-4" >
+
+               <div class  = "card-body">
+
+                <div class="form-group">
+                <label for = "age" colo>Age in years: </label>
+                <select class="form-select" id ="age" name = "age", placeholder ="age", required =required>
+                    <option value = "4">4</option>
+                    <option value = "5">5</option>
+                    <option value = "6">6</option>
+                    <option value = "7">7</option>
+                    <option value = "8">8</option>
+                    <option value = "9">9</option>
+                    <option value = "10">10</option>
+                    <option value = "11">11</option>
+                </select>
+                </div>
+                <br>
+                
+                <div class="form-group">
+                <label for = "gender">Gender: </label>
+                <select class="form-select" id = "gender" name = "gender" placeholder = "gender", required="required">
+                    <option value = "0">Female</option>
+                    <option value = "1">Male</option>
+                </select>
+                </div>
+                <br>
+                
+                <div class="form-group">
+                <label for ="jaundice">Was your child born with jaundice? </label>
+                <select  class="form-select" id = "jaundice" name = "jaundice" placeholder = "jaundice", required="required">
+                    <option value = "0">No</option>
+                    <option value = "1">Yes</option>
+                </select>
+                </div>
+                </div>
+            </div>
+            
+                <br>
+                <br>
+                <div class="d-flex align-items-center">
+                <button type ="submit" class = "btn btn-primary btn-block btn-large">Submit</button>
+            </div>
+             </form>
+            </div>
+
+            
+
+           
+
+             {% endblock %}
+</body>
+</html>

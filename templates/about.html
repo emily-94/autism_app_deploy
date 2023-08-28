@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+{% extends 'base.html' %}
+
+
+{% block main %}
+
+<style>
+
+h1 {
+    font-size: 3.5em; 
+    font-family: 'Aldrich', sans-serif; 
+    color: #A969d4;
+    text-shadow: 2px 2px 2px  #000000;
+    letter-spacing: 1.2px;
+    text-align: center;   }
+
+h5 {font-size: 1.5em; 
+    font-family: 'Aldrich', sans-serif; 
+    color: #A969d4;
+    text-shadow: 1px 1px 1px  #000000;
+    letter-spacing: 1.2px;
+    text-align: left;
+}
+
+
+</style>
+
+</head>
+<body>
+    
+
+
+<h1>About</h1>
+<div class = "container">
+
+<div class = "card mt-4" style="background-color: #EBD8F5;" >
+   
+    <div class  = "card-body">
+         <h5 class="card-title" >What is Autism Spectrum Disorder?</h5>
+        <p>Autism Spectrum Disorder (ASD) is a neurodevelopmental disorder that affects how an individual perceives the world and interacts with others. Individuals who are diagnosed with ASD are likely to have challenges with social skills and communication, and often display repetitive behaviours. It is estimated that approximately 1 in 100 individuals worldwide have been diagnosed with ASD, although these estimates vary across different countries.</p>
+        <p> Autism is considered to be a spectrum because it is different for every person, and the types and severity of symptoms vary widely. Some people with ASD may need significant support in living their life, while others don't. Signs and symptoms of ASD can be observed in children as young as 12-18 months. However, people can also be diagnosed way into adulthood.</p> 
+    </div>
+     </div>
+    
+<div class = "card mt-4" style="background-color: #EBD8F5;" >
+   
+    <div class  = "card-body">
+             <h5 class="card-title" >How is ASD assessed?</h5>
+            <p>ASD is diagnosed by a clinical professional, and the assessment may include observations, parent interview, cognitive assessments and medical examination. Common tools include the Autism Diagnostic Interview-Revised (ADI-R) and the Autism Diagnostic Observation Schedule (ADOS)</p>
+            <p> Early screening questionnaires can be administered to refer patients to a clinican. These include the Q-CHAT (Quantitative Checklist for Autism in Toddlers) and the Autism-Spectrum Quotient (AQ). This screening test uses shortened version of these tests, the Q-CHAT-10 and AQ-10. Click the links below to view these assessments. </p>
+            <a href ="{{url_for ('static', filename = 'Q-CHAT10-Toddler.pdf')}}">Toddler (12-36 months)</a>
+            <a href ="{{url_for ('static', filename = 'AQ10-Child.pdf')}}">Child (4-11 years)</a>
+            <a href ="{{url_for ('static', filename = 'AQ10-Adolescent.pdf')}}">Adolescent (12-15 years)</a>
+            <a href ="{{url_for ('static', filename = 'AQ10-Adult.pdf')}}">Adult (16+)</a> 
+        </div>
+        </div>
+<div class = "card mt-4" style="background-color: #EBD8F5;" >
+   
+    <div class  = "card-body">
+            <h5 class="card-title" >How does the AI system work?</h5>
+                <p>This screening system uses Artificial Intelligence (AI) to calculate a result for each test taken. The algorithm has been created through training a model on past data.</p>
+                <a href ="https://www.kaggle.com/datasets/fabdelja/autism-screening-for-toddlers">Toddler dataset</a>
+                <a href = "https://archive.ics.uci.edu/dataset/419/autistic+spectrum+disorder+screening+data+for+children">Child dataset</a>
+                <a href = "https://archive.ics.uci.edu/dataset/420/autistic+spectrum+disorder+screening+data+for+adolescent">Adolescent dataset</a>
+                <a href = "https://archive.ics.uci.edu/dataset/426/autism+screening+adult">Adult dataset</a>
+                <p> Instead of using the traditional scoring system, this system finds patterns in past data to make predictions about new information to improve accuracy. This test should not be used as a diagnostic tool, but to enable parents and caregivers access to ASD tests and provide information on ASD traits. </p>
+        </div>
+    </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}
+
+</body>
+</html>

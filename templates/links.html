@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+{% extends 'base.html' %}
+
+
+{% block main %}
+
+<style>
+
+    h1 {
+        font-size: 3.5em; 
+        font-family: 'Aldrich', sans-serif; 
+        color: #A969d4;
+        text-shadow: 2px 2px 2px  #000000;
+        letter-spacing: 1.2px;
+        text-align: center;   }
+    
+    h5 {font-size: 1.5em; 
+        font-family: 'Aldrich', sans-serif; 
+        color: #A969d4;
+        text-shadow: 1px 1px 1px  #000000;
+        letter-spacing: 1.2px;
+        text-align: left;
+    }
+    
+   
+    </style>
+
+</head>
+<body>
+    
+
+    <h1>Useful Links</h1>
+    <div class = "container">
+    
+    <div class = "card mt-4" style="background-color: #EBD8F5;" >
+       
+        <div class  = "card-body">
+             <h5 class="card-title" >Autism Spectrum Disorder</h5>
+             <a href = "https://www.nhs.uk/conditions/autism/">https://www.nhs.uk/conditions/autism/</a><br>
+             <a href = "https://www.autismresearchcentre.com/">https://www.autismresearchcentre.com/</a><br>
+             <a href = "https://nationalautismresources.com/">https://nationalautismresources.com/</a><br>
+             <a href = "https://www.nimh.nih.gov/health/topics/autism-spectrum-disorders-asd">https://www.nimh.nih.gov/health/topics/autism-spectrum-disorders-asd</a><br>
+             <a href = "https://www.autism.org.uk/advice-and-guidance/what-is-autism">https://www.autism.org.uk/advice-and-guidance/what-is-autism</a>
+
+            
+        </div>
+         </div>
+        
+    <div class = "card mt-4" style="background-color: #EBD8F5;" >
+       
+        <div class  = "card-body">
+                 <h5 class="card-title" >Assessment Information</h5>
+                 <a href = "https://www.nhs.uk/conditions/autism/getting-diagnosed/how-to-get-diagnosed/">https://www.nhs.uk/conditions/autism/getting-diagnosed/how-to-get-diagnosed/</a><br>
+                 <a href = "https://www.cdc.gov/ncbddd/autism/screening.html">https://www.cdc.gov/ncbddd/autism/screening.html</a><br>
+                 <a href = "https://autism.org/screening-assessment/">https://autism.org/screening-assessment/</a>
+                 <a href = "https://www.autism.org.uk/advice-and-guidance/topics/diagnosis/diagnostic-assessment">https://www.autism.org.uk/advice-and-guidance/topics/diagnosis/diagnostic-assessment</a>
+         
+            </div>
+            </div>
+    <div class = "card mt-4" style="background-color: #EBD8F5;" >
+       
+        <div class  = "card-body">
+                <h5 class="card-title" >Relevant Articles</h5>
+                <p><div class="csl-entry">Thabtah, F. (2019). An accessible and efficient autism screening method for behavioural data and predictive analyses. <i>Health Informatics Journal</i>, <i>25</i>(4), 1739–1755. </div><a href = "https://doi.org/10.1177/1460458218796636">doi:10.1177/1460458218796636</a></p>
+                <p><div class="csl-entry">Reza Shahamiri, S., &#38; Thabtah, F. (2020.). <i>Autismspectrum disorder (SD);. Cognitive computing;. Deeplearning;. Intelligent systems</i>.</div><a href ="https://doi.org/10.1007/s12559-020-09743-3/">doi.org/10.1007/s12559-020-09743-3/</a></p>
+                    
+            </div>
+        </div>
+    
+    
+    
+    
+    
+    
+    </div>
+
+
+
+{% endblock %}
+
+</body>
+</html>

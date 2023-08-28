@@ -1,0 +1,42 @@
+Flask Deploy/
+|────.venv/
+|────_pycache_/
+|────static/
+     |──adolescent.jpg
+     |──adult.jpg
+     |──child.jpg
+     |──toddler.jpg
+     |──AQ10-Adolescent.pdf
+     |──AQ10-Adult.pdf
+     |──AQ10-Child.pdf
+     |──AQ10-Toddler.pdf
+|────templates/
+     |──about.html
+     |──adolescentquestions.html
+     |──adolescentest.html
+     |──adultquestions.html
+     |──adulttest.html
+     |──base.html
+     |──childquestions.html
+     |──childtest.html
+     |──home.html
+     |──links.html
+     |──predict.html
+     |──toddlerquestions.html
+     |──toddlertest.html
+     |──xai.html
+|──.env
+|──adult_svm.pkl
+|──adultXtrain.csv
+|──app.py
+|──child_svm.pkl
+|──childXtrain.csv
+|──README.md
+|──requirements.txt
+|──toddler_svm.pkl
+|──toddlerXtrain.csv
+
+
+
+
+   

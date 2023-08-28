@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8"
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+{% extends 'base.html' %}
+
+
+    {% block main %}
+
+  <style>
+  
+  h1 {
+    font-size: 2.5em; 
+    font-family: 'Aldrich', sans-serif; 
+    color: #a969d4;
+    text-shadow: 2px 2px 2px  #000000;
+    letter-spacing: 1.2px;
+    text-align: center;   }
+
+
+
+  </style>  
+    
+</head>
+<body>
+
+        <div class ="container">
+
+
+          
+          <div class="mt-4 p-3 text-black rounded" style ="background-color: #EBD8F5";>
+            <h1 style = "text-align:center">Autism Quiz for Toddlers</h1>
+            <p style="text-align: center; font-size: 1.15rem; margin-top: 20px;">
+                This quiz is designed to screen for Autism Spectrum Disorder in toddlers and is based on the Q-CHAT-10 (Quantative Checklist for Autism in Toddlers).
+                The questions should be answered by a parent or carer of the toddler.
+            </p>
+        </div>
+        
+
+             <form action = "{{url_for ('toddlerpredict', unique_id = unique_id)}}" method = "post">
+              
+
+                <div class = "card mt-4" >
+                        <div class  = "card-body">
+                            <h5 class="card-title">For each of the statements below, select the most appropriate option for your child.</h5>
+
+
+                <div class = "form-group">
+                <label for ="A1">1. Does your child look at you when you call {{his_her}} name?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="A1" id="A1" placeholder ="A1" required = "required", value ="Always">
+                        <label class="form-check-label" for="A1">
+                          Always
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="A1" id="A1" placeholder ="A1" required = "required", value ="Usually">
+                        <label class="form-check-label" for="A1">
+                          Usually
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="A1" id="A1" placeholder ="A1" required = "required", value ="Sometimes">
+                        <label class="form-check-label" for="A1">
+                          Sometimes
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="A1" id="A1" placeholder ="A1" required = "required", value ="Rarely">
+                        <label class="form-check-label" for="A1">
+                          Rarely
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="A1" id="A1" placeholder ="A1" required = "required", value ="Never">
+                        <label class="form-check-label" for="A1">
+                          Never
+                        </label>
+                    </div>
+               </div>
+                <br>
+                <br>
+
+                <div class = "form-group">
+                    <label for ="A2">2. How easy is it for you to get eye contact with your child?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A2" id="A2" placeholder ="A2" required = "required", value ="Very easy">
+                            <label class="form-check-label" for="A2">
+                              Very easy
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A2" id="A2" placeholder ="A2" required = "required", value ="Quite easy">
+                            <label class="form-check-label" for="A2">
+                              Quite easy
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A2" id="A2" placeholder ="A2" required = "required", value ="Quite difficult">
+                            <label class="form-check-label" for="A2">
+                              Quite difficult
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A2" id="A2" placeholder ="A2" required = "required", value ="Very difficult">
+                            <label class="form-check-label" for="A2">
+                              Very difficult
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A2" id="A2" placeholder ="A2" required = "required", value ="Impossible">
+                            <label class="form-check-label" for="A2">
+                              Impossible
+                            </label>
+                        </div>                      
+                   </div>
+
+                <br>
+                <br>
+                <div class = "form-group">
+                    <label for ="A3">3. Does your child point to indicate that {{gender_text}} wants something? (e.g. a toy that is out of reach)</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A3" id="A3" placeholder ="A3" required = "required", value ="Many times a day">
+                            <label class="form-check-label" for="A3">
+                              Many times a day
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A3" id="A3" placeholder ="A3" required = "required", value ="A few times a day">
+                            <label class="form-check-label" for="A3">
+                              A few times a day
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A3" id="A3" placeholder ="A3" required = "required", value ="A few times a week">
+                            <label class="form-check-label" for="A3">
+                              A few times a week 
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A3" id="A3" placeholder ="A3" required = "required", value ="Less than once a week">
+                            <label class="form-check-label" for="A3">
+                              Less than once a week
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A3" id="A3" placeholder ="A3" required = "required", value ="Never">
+                            <label class="form-check-label" for="A3">
+                              Never
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                   
+                    <div class = "form-group">
+                    <label for ="A4">4. Does your child point to share interest with you?(e.g. pointing at an interesting sight)</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A4" id="A4" placeholder ="A4" required = "required", value = "Many times a day">
+                            <label class="form-check-label" for="A4">
+                              Many times a day
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A4" id="A4" placeholder ="A4" required = "required", value = "A few times a day">
+                            <label class="form-check-label" for="A4">
+                              A few times a day
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A4" id="A4" placeholder ="A4" required = "required", value = "A few times a week">
+                            <label class="form-check-label" for="A4">
+                              A few times a week
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A4" id="A4" placeholder ="A4" required = "required", value = "Less than once a week">
+                            <label class="form-check-label" for="A4">
+                              Less than once a week
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A4" id="A4" placeholder ="A4" required = "required", value = "Never">
+                            <label class="form-check-label" for="A4">
+                              Never
+                            </label>
+                        </div> 
+                                     
+                   </div>
+
+                <br>
+                <br>
+                <div class = "form-group">
+                    <label for ="A5">5. Does your child pretend ? (e.g. care for dolls, talk on a toy phone)</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A5" id="A5" placeholder ="A5" required = "required", value ="Many times a day">
+                            <label class="form-check-label" for="A5">
+                              Many times a day
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A5" id="A5" placeholder ="A5" required = "required", value = "A few times a day">
+                            <label class="form-check-label" for="A5">
+                              A few times a day
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A5" id="A5" placeholder ="A5" required = "required", value ="A few times a week">
+                            <label class="form-check-label" for="A5">
+                              A few times a week
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A5" id="A5" placeholder ="A5" required = "required", value = "Less than once a week">
+                            <label class="form-check-label" for="A5">
+                              Less than once a week
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A5" id="A5" placeholder ="A5" required = "required", value = "Never">
+                            <label class="form-check-label" for="A5">
+                              Never
+                            </label>
+                        </div>               
+                   </div>
+            
+                <br>
+                <br>
+                <div class = "form-group">
+                    <label for ="A6">6. Does your child follow where you're looking?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A6" id="A6" placeholder ="A6" required = "required", value ="Many times a day">
+                            <label class="form-check-label" for="A6">
+                              Many times a day
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A6" id="A6" placeholder ="A6" required = "required", value ="A few times a day">
+                            <label class="form-check-label" for="A6">
+                              A few times a day
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A6" id="A6" placeholder ="A6" required = "required", value ="A few times a week">
+                            <label class="form-check-label" for="A6">
+                              A few times a week
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A6" id="A6" placeholder ="A6" required = "required", value ="Less than once a week">
+                            <label class="form-check-label" for="A6">
+                              Less than once a week
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A6" id="A6" placeholder ="A6" required = "required", value ="Never">
+                            <label class="form-check-label" for="A6">
+                              Never
+                            </label>
+                        </div>               
+                   </div>
+                   <br>
+                   <br>
+
+                   <div class = "form-group">
+                    <label for ="A7">7.If you or someone else in the family is visibly upset, does your child show signs of wanting to comfort them? (e.g. stroking hair, hugging them)</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A7" id="A7" placeholder ="A7" required = "required", value ="Always">
+                            <label class="form-check-label" for="A7">
+                              Always
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A7" id="A7" placeholder ="A7" required = "required", value ="Usually">
+                            <label class="form-check-label" for="A7">
+                              Usually
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A7" id="A7" placeholder ="A7" required = "required", value ="Sometimes">
+                            <label class="form-check-label" for="A7">
+                              Sometimes
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A7" id="A7" placeholder ="A7" required = "required", value ="Rarely">
+                            <label class="form-check-label" for="A7">
+                              Rarely
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A7" id="A7" placeholder ="A7" required = "required", value ="Never">
+                            <label class="form-check-label" for="A7">
+                              Never
+                            </label>
+                        </div>
+                                  
+                   </div>
+             
+                <br>
+                <br>
+
+                <div class = "form-group">
+                    <label for ="A8">8.Would you describe your child's first words as:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A8" id="A8" placeholder ="A8" required = "required", value ="Very typical">
+                            <label class="form-check-label" for="A8">
+                              Very typical
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A8" id="A8" placeholder ="A8" required = "required", value = "Quite typical">
+                            <label class="form-check-label" for="A8">
+                              Quite typical
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A8" id="A8" placeholder ="A8" required = "required", value = "Slightly unusual">
+                            <label class="form-check-label" for="A8">
+                              Slightly unusual
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A8" id="A8" placeholder ="A8" required = "required", value = "Very unusual">
+                            <label class="form-check-label" for="A8">
+                              Very unusual
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A8" id="A8" placeholder ="A8" required = "required", value ="My child doesn't speak">
+                            <label class="form-check-label" for="A8">
+                              My child doesn't speak
+                            </label>
+                        </div>
+                                     
+                   </div>
+                <br>
+                <br>
+
+                <div class = "form-group">
+                    <label for ="A9">9.Does your child use simple gestures (e.g. wave goodbye)</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A9" id="A9" placeholder ="A9" required = "required", value ="Many times a day">
+                            <label class="form-check-label" for="A9">
+                              Many times a day
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A9" id="A9" placeholder ="A9" required = "required", value = "A few times a day">
+                            <label class="form-check-label" for="A9">
+                              A few times a day
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A9" id="A9" placeholder ="A9" required = "required", value = "A few times a week">
+                            <label class="form-check-label" for="A9">
+                              A few times a week
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A9" id="A9" placeholder ="A9" required = "required", value = "Less than once a week">
+                            <label class="form-check-label" for="A9">
+                              Less than once a week
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A9" id="A9" placeholder ="A9" required = "required", value = "Never">
+                            <label class="form-check-label" for="A9">
+                              Never
+                            </label>
+                        </div>
+                        
+                   </div>
+                <br>
+                <br>
+
+
+                <div class = "form-group">
+                    <label for ="A10">10.Does your child stare at nothing with no apparent purpose?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A10" id="A10" placeholder ="A10" required = "required", value = "Many times a day">
+                            <label class="form-check-label" for="A10">
+                              Many times a day
+                            </label>
+                        </div>
+                       
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A10" id="A10" placeholder ="A10" required = "required", value = "A few times a day">
+                            <label class="form-check-label" for="A10">
+                              A few times a day
+                            </label>
+                        </div>
+                    
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A10" id="A10" placeholder ="A10" required = "required", value = "A few times a week">
+                            <label class="form-check-label" for="A10">
+                              A few times a week
+                            </label>
+                        </div>
+                       
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A10" id="A10" placeholder ="A10" required = "required", value = "Less than once a week">
+                            <label class="form-check-label" for="A10">
+                              Less than once a week
+                            </label>
+                        </div>
+                      
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="A10" id="A10" placeholder ="A10" required = "required", value = "Never">
+                            <label class="form-check-label" for="A10">
+                              Never
+                            </label>
+                        </div>
+                   
+                   </div>
+
+                <br>
+                <br>
+                <div class="d-flex align-items-center">
+                <button type ="submit" class = "btn btn-primary btn-block btn-large">Submit</button>
+            </div>
+             </form>
+            </div>
+
+            
+
+           
+
+             {% endblock %}
+</body>
+</html>

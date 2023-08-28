@@ -1,0 +1,125 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ASD Screening App</title>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    
+    {% extends 'base.html' %}
+
+    {% block main %}
+    
+
+    <style>
+
+    h1 {
+    font-size: 2.5em; 
+    font-family: 'Aldrich', sans-serif; 
+    color: #a969d4;
+    text-shadow: 2px 2px 2px  #000000;
+    letter-spacing: 1.2px;
+    text-align: center;   }
+
+    .container {
+    padding: 20px;
+}
+       
+    p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    }
+
+        /* Style for the image container */
+    .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+        }
+
+        /* Style for each image and caption */
+    .image-container .image-box {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+      }
+
+    .image-container img {
+    width: 100%;
+    max-height: 200px;
+
+    }    
+
+    .card {
+    margin: 10px;
+        }
+
+    .btn-primary {
+    background-color: #4a47a3; 
+        }   
+         
+        
+    </style>
+</head>
+
+
+
+<body>
+   
+
+
+
+    <h1 >Take a quick autism screening test!</h1>
+    <div class="container" style = "text-align:center">
+    <p >The screening test uses a short questionnaire commonly used for Autism Spectrum Disorder screening and an AI-based scoring system.</p>
+    <p> Select the age category to begin! </p></div>
+    <div class="image-container">
+        
+        
+        <div class="card" style="width: 18rem; background-color: #EBD8F5;">
+            <img class="card-img-top" src="static/toddler.jpg" alt="Card image cap">
+            <div class="card-body text-center">
+              <h5 class="card-title" >Toddler</h5>
+              <p class="card-text" >12 to 36 months</p>
+              <a href="{{ url_for('toddler') }}" class="btn btn-primary" >Start Test</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;background-color: #EBD8F5;">
+            <img class="card-img-top" src="static/child.jpg" alt="Card image cap">
+            <div class="card-body text-center">
+              <h5 class="card-title" >Child</h5>
+              <p class="card-text" >4 to 11 years</p>
+              <a href="{{ url_for('child') }}" class="btn btn-primary" >Start Test</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;background-color: #EBD8F5;">
+            <img class="card-img-top" src="static/adolescent.jpg" alt="Card image cap">
+            <div class="card-body text-center">
+              <h5 class="card-title" >Adolescent</h5>
+              <p class="card-text" >12 to 15 years</p>
+              <a href="{{ url_for('adolescent') }}" class="btn btn-primary" >Start Test</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;background-color: #EBD8F5;">
+            <img class="card-img-top" src="static/adult.jpg" alt="Card image cap">
+            <div class="card-body text-center">
+              <h5 class="card-title" >Adult</h5>
+              <p class="card-text" >16+ years</p>
+              <a href="{{ url_for('adult') }}" class="btn btn-primary" >Start Test</a>
+            </div>
+          </div>
+
+    </div>
+
+    {% endblock %}
+</body>
+</html>
+

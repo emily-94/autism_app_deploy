@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-3.0.1.min.js"></script>
+    
+    {% extends 'base.html' %}
+
+
+    {% block main %}
+    <style>
+  
+        h1 {
+          font-size: 2.5em; 
+          font-family: 'Aldrich', sans-serif; 
+          color: #A969d4;
+          text-shadow: 2px 2px 2px  #000000;
+          letter-spacing: 1.2px;
+          text-align: center;   }
+
+        p {font-size: 1.1em; 
+        }
+      
+      
+      
+    </style>      
+</head>
+<body>
+    
+
+
+<div class ="container">
+          
+    <div class="mt-4 p-3 text-black rounded" style ="background-color: #EBD8F5";>
+        <h1 style = "text-align:center">Explanation of Results</h1>
+        </div>
+        </div>
+
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+       <br>
+       <br> 
+      <p> The AI system analyses the answers you gave and decides if they lean more towards Autism Spectrum Disorder (ASD) traits or not, based on its learning from past data. </p>
+      <br>
+     
+      <p> Your result is  :<strong>{{result_text}} </strong></p>
+      <br>
+    
+      <p>The chart shows how much each answer influenced the AI's decision. The bigger the bar, the bigger the influence.</p>
+      <br>
+      
+      <p> <span style = "color: red;">Red bars </span>lean towards ASD, and <span style = "color: blue;">blue bars </span>away from it. Hover over each bar to see the question and the response you gave. </p>
+      <br>
+      <p><a href = "{{ url_for ('about')}}"> Find out more about the scoring system.</a></p>
+      </div>
+      <div class="col">
+       <br>
+       <br> 
+        {{ script|safe }}
+        {{div|safe}}
+      </div>
+      </div>
+
+
+{% endblock %}
+
+</body>
+</html>
